@@ -1,0 +1,63 @@
+2025-05-25 23:54:34,247 - ERROR - Failed to establish DB connection: (1049, "Unknown database 'phonepulseph'")
+2025-05-25 23:58:07,582 - INFO - DB connection established successfully
+2025-05-25 23:58:07,587 - INFO - Database created successfully
+2025-05-25 23:58:07,588 - INFO - Using database phonepulseph
+2025-05-25 23:58:07,641 - INFO - Tables created successfully
+2025-05-25 23:58:07,641 - ERROR - Failed to insert transaction data: [WinError 3] The system cannot find the path specified: 'pulse/data/aggregated/transaction/country/india/state/'
+2025-05-25 23:58:07,641 - ERROR - Failed to insert insurance data: [WinError 3] The system cannot find the path specified: 'pulse/data/aggregated/insurance/country/india/state/'
+2025-05-26 00:04:05,647 - INFO - DB connection established successfully
+2025-05-26 00:04:05,649 - INFO - Database created successfully
+2025-05-26 00:04:05,649 - INFO - Using database phonepulseph
+2025-05-26 00:04:05,655 - INFO - Tables created successfully
+2025-05-26 00:10:24,288 - INFO - DB connection established successfully
+2025-05-26 00:10:24,290 - INFO - Database created successfully
+2025-05-26 00:10:24,290 - INFO - Using database phonepulseph
+2025-05-26 00:10:24,294 - INFO - Tables created successfully
+2025-05-26 00:10:24,294 - ERROR - Failed to insert transaction data: [WinError 3] The system cannot find the path specified: 'C:\\Users\\Administrator\\Desktop\\Miniproj\\venv\\pulse\\pulse/data/aggregated/transaction/country/india/state/'
+2025-05-26 00:10:24,294 - ERROR - Failed to insert insurance data:[WinError 3] The system cannot find the path specified: 'C:\\Users\\Administrator\\Desktop\\Miniproj\\venv\\pulse\\pulse/data/aggregated/insurance/country/india/state/'
+2025-05-26 00:12:42,057 - INFO - DB connection established successfully
+2025-05-26 00:12:42,059 - INFO - Database created successfully
+2025-05-26 00:12:42,059 - INFO - Using database phonepulseph
+2025-05-26 00:12:42,063 - INFO - Tables created successfully
+2025-05-26 00:12:43,204 - INFO - Transaction data inserted successfully
+2025-05-26 00:12:43,215 - ERROR - Failed to insert insurance data:'premiumAmount'
+2025-05-26 00:22:23,166 - INFO - DB connection established successfully
+2025-05-26 00:22:23,168 - INFO - Database created successfully
+2025-05-26 00:22:23,169 - INFO - Using database phonepulseph
+2025-05-26 00:22:23,195 - INFO - Table dropped successfully
+2025-05-26 00:22:23,218 - INFO - Table created successfully
+2025-05-26 00:22:24,533 - INFO - Data inserted successfully
+2025-05-26 00:31:56,804 - INFO - DB connection established successfully
+2025-05-26 00:31:56,806 - INFO - Database created successfully
+2025-05-26 00:31:56,806 - INFO - Using database phonepulseph
+2025-05-26 00:31:56,820 - INFO - Table dropped successfully
+2025-05-26 00:31:56,847 - INFO - Table created successfully
+2025-05-26 00:31:58,199 - INFO - Data inserted successfully
+2025-05-26 00:34:55,260 - INFO - DB connection established successfully
+2025-05-26 00:34:55,261 - INFO - Database created successfully
+2025-05-26 00:34:55,262 - INFO - Using database phonepulseph
+2025-05-26 00:34:55,274 - INFO - Table dropped successfully
+2025-05-26 00:34:55,294 - INFO - Table created successfully
+2025-05-26 00:34:56,812 - INFO - Data inserted successfully
+2025-05-26 00:36:39,839 - INFO - DB connection established successfully
+2025-05-26 00:36:39,840 - INFO - Database created successfully
+2025-05-26 00:36:39,841 - INFO - Using database phonepulseph
+2025-05-26 00:36:39,853 - INFO - Table dropped successfully
+2025-05-26 00:36:39,870 - INFO - Table created successfully
+2025-05-26 00:36:43,094 - INFO - Data inserted successfully
+2025-05-26 00:39:40,634 - INFO - DB connection established successfully
+2025-05-26 00:39:40,636 - INFO - Database created successfully
+2025-05-26 00:39:40,636 - INFO - Using database phonepulseph
+2025-05-26 00:39:40,648 - INFO - Table dropped successfully
+2025-05-26 00:39:40,665 - INFO - Table created successfully
+2025-05-26 00:39:47,328 - INFO - Data inserted successfully
+2025-05-26 00:44:58,643 - INFO - DB connection established successfully
+2025-05-26 00:44:58,645 - INFO - Database created successfully
+2025-05-26 00:44:58,645 - INFO - Using database phonepulseph
+2025-05-26 00:44:58,647 - INFO - Table created successfully
+2025-05-26 00:44:59,989 - INFO - Data inserted successfully
+2025-05-26 00:46:38,302 - INFO - DB connection established successfully
+2025-05-26 00:46:38,304 - INFO - Database created successfully
+2025-05-26 00:46:38,305 - INFO - Using database phonepulseph
+2025-05-26 00:46:38,306 - INFO - Table created successfully
+2025-05-26 00:46:38,637 - INFO - Data inserted successfully
