@@ -28,5 +28,5 @@ Usage
 
 1. Clone the repository and navigate to the project directory.
 2. Install the required libraries using pip install -r requirements.txt.
-3. Run the dashboard using streamlit run app.py.
+3. Run the dashboard using streamlit run phonepeapps.py.
 4. Access the dashboard in your web browser at http://localhost:8501
