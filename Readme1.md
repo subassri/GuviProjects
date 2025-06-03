@@ -7,10 +7,10 @@ This project is a data analysis and visualization dashboard built using Streamli
 Features
 
 - Interactive dashboard with multiple categories:
-    - Decoding Transaction Dynamics
-    - Device Dominance
-    - Insurance Penetration
-    - Map Transaction Analysis
+    - Decoding Transaction Dynamics on PhonePe
+    - Device Dominance and User Engagement Analysis
+    - Insurance Penetration and Growth Potential Analysis
+    - Transaction Analysis for Market Expansion
     - User Engagement and Growth Strategy
 - Visualizations include bar charts, scatter plots, line charts, pie charts, and histograms
 - Geospatial visualization of transaction counts by state
