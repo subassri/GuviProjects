@@ -1,9 +1,15 @@
+
 import streamlit as st
 import pandas as pd
+pd.set_option('display.max_rows', None)
+pd.set_option('display.max_columns', None)
 import plotly.express as px
 import pymysql
 import warnings
 warnings.filterwarnings('ignore')
+
+st.set_page_config(layout="wide")
+
 
 class PhonePeAnalysis:
     def __init__(self):
@@ -25,33 +31,33 @@ class PhonePeAnalysis:
                 'scatter_plot': """SELECT Year, AVG(Transaction_amount) as avg_amount FROM aggregate_transaction GROUP BY Year""",
                 'line_chart': """SELECT Transaction_type, MAX(Transaction_count) as max_count FROM aggregate_transaction GROUP BY Transaction_type""",
                 'pie_chart': """SELECT Transaction_type, COUNT(*) as count FROM aggregate_transaction GROUP BY Transaction_type""",
-                'histogram': """SELECT Transaction_count FROM aggregate_transaction"""
+                
             },
             'Device Dominance': {
-                'bar_chart': """SELECT State, SUM(registeredUsers) as registered_users FROM aggsusernew GROUP BY State""",
+                'bar_chart': """SELECT State, SUM(registeredUsers) as registered_users FROM aggsusernew GROUP BY State LIMIT 10""",
                 'scatter_plot': """SELECT Year, AVG(registeredUsers) as avg_registered FROM aggsusernew GROUP BY Year""",
-                'line_chart': """SELECT State, MAX(registeredUsers) as max_registered FROM aggsusernew GROUP BY State""",
+                'line_chart': """SELECT State, MAX(registeredUsers) as max_registered FROM aggsusernew GROUP BY State LIMIT 10""",
                 'pie_chart': """SELECT State, COUNT(*) as count FROM aggsusernew GROUP BY State""",
-                'histogram': """SELECT registeredUsers FROM aggsusernew"""
+                
             },
             'Insurance Penetration': {
-                'bar_chart': """SELECT State, SUM(Premium) as premium FROM new_agginsu GROUP BY State""",
+                'bar_chart': """SELECT State, SUM(Premium) as premium FROM new_agginsu GROUP BY State LIMIT 10""",
                 'scatter_plot': """SELECT Year, AVG(Premium) as avg_premium FROM new_agginsu GROUP BY Year""",
-                'line_chart': """SELECT State, MAX(Premium) as max_premium FROM new_agginsu GROUP BY State""",
-                'pie_chart': """SELECT State, COUNT(*) as count FROM new_agginsu GROUP BY State""",
-                'histogram': """SELECT Premium FROM new_agginsu"""
+                'line_chart': """SELECT State, MAX(Premium) as max_premium FROM new_agginsu GROUP BY State LIMIT 10""",
+                'pie_chart': """SELECT State, COUNT(*) as count FROM new_agginsu GROUP BY State LIMIT 10""",
+                
             },
             'Map Transaction Analysis': {
                 'bar_chart': """SELECT State, SUM(Amount) as amount FROM map_map GROUP BY State""",
-                'pie_chart': """SELECT State, COUNT(*) as count FROM map_map GROUP BY State""",
-                'histogram': """SELECT Amount FROM map_map"""
+                'pie_chart': """SELECT State, COUNT(*) as count FROM map_map GROUP BY State LIMIT 10""",
+                
             },
             'User Engagement and Growth Strategy': {
-                'bar_chart': """SELECT State, SUM(Registered_Users) as registered_users FROM topusernew GROUP BY State""",
+                'bar_chart': """SELECT State, SUM(Registered_Users) as registered_users FROM topusernew GROUP BY State LIMIT 10""",
                 'scatter_plot': """SELECT Year, AVG(Registered_Users) as avg_registered FROM topusernew GROUP BY Year""",
-                'line_chart': """SELECT State, MAX(Registered_Users) as max_registered FROM topusernew GROUP BY State""",
-                'pie_chart': """SELECT State, COUNT(*) as count FROM topusernew GROUP BY State""",
-                'histogram': """SELECT Registered_Users FROM topusernew"""
+                'line_chart': """SELECT State, MAX(Registered_Users) as max_registered FROM topusernew GROUP BY State LIMIT 10""",
+                'pie_chart': """SELECT State, COUNT(*) as count FROM topusernew GROUP BY State LIMIT 10""",
+                
             }
         }
 
@@ -130,11 +136,8 @@ class PhonePeAnalysis:
                 elif chart_type == 'pie_chart':
                     fig = px.pie(df, values=df.columns[1], names=df.columns[0])
                     st.plotly_chart(fig, use_container_width=True)
-                elif chart_type == 'histogram':
-                    if len(df.columns) > 0 and df.dtypes[0].kind in 'bifc':
-                        fig = px.histogram(df, x=df.columns[0])
-                        st.plotly_chart(fig, use_container_width=True)
-                    else:
+                
+                else:
                         st.write("Error: DataFrame is empty or column type is not numeric.")
             except Exception as e:
                 st.write(f"Error displaying {chart_type}: {e}")
